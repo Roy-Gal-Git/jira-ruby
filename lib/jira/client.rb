@@ -54,7 +54,7 @@ module JIRA
     #
     # The authenticated client instance returned by the respective client type
     # (Oauth, Basic)
-    attr_accessor :consumer, :request_client, :http_debug, :field_map_cache
+    attr_accessor :consumer, :request_client, :http_debug, :field_map_cache, :field_options_cache
 
     # The configuration options for this client instance
     attr_reader :options
@@ -244,6 +244,10 @@ module JIRA
 
     def Field # :nodoc:
       JIRA::Resource::FieldFactory.new(self)
+    end
+
+    def FieldOption # :nodoc:
+      JIRA::Resource::FieldOptionFactory.new(self)
     end
 
     def Board
