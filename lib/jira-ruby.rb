@@ -12,6 +12,7 @@ require 'jira/base'
 require 'jira/base_factory'
 require 'jira/has_many_proxy'
 require 'jira/http_error'
+require 'jira/version'
 
 require 'jira/resource/user'
 require 'jira/resource/watcher'
